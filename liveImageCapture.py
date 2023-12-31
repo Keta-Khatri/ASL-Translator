@@ -7,9 +7,9 @@ import os
 
 import mediapipe as mp
 import tkinter as tk
-from prediction import predict_result
-from removeBackground import remove_background
-from translateResult import translate_result
+from prediction import predictResult
+from removeBackground import removeBackground
+from translateResult import translateResult
 
 
 
@@ -95,11 +95,11 @@ def captureHandImage():
                 output_path = 'hand_without_landmarks_clear.png'
                 model_path = 'asl_model.h5'
 
-                remove_background(input_path, output_path)
-                predicted_class = predict_result(output_path, model_path)
+                removeBackground(input_path, output_path)
+                predicted_class = predictResult(output_path, model_path)
 
                 if predicted_class is not None:
-                    letter = translate_result(predicted_class)
+                    letter = translateResult(predicted_class)
                     predicted_letters.append(letter) 
                     updateLabels(predicted_letter_label,
                                   all_letters_label, letter, predicted_letters)
