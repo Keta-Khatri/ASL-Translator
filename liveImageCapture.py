@@ -8,8 +8,8 @@ import os
 import mediapipe as mp
 import tkinter as tk
 from prediction import predict_result
-from remove_background import remove_background
-from translate_result import translate_result
+from removeBackground import remove_background
+from translateResult import translate_result
 
 
 

@@ -1,4 +1,4 @@
-from live_image_capture import capture_hand_image
+from liveImageCapture import capture_hand_image
 
 capture_hand_image()
 
