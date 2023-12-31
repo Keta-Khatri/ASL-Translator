@@ -38,7 +38,7 @@ This repository contains a **Convolutional Neural Network** (CNN) model for reco
    ```bash
    git clone https://github.com/Keta-Khatri/ASL2Text.git
    ```
-2. Install dependencies:
+2. Install dependencies in Python 3.9.6:
     ```bash
    pip install -r requirements.txt
    ```
