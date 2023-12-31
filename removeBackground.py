@@ -1,7 +1,7 @@
 from rembg import remove
 from PIL import Image
 
-def remove_background(input_path, output_path):
+def removeBackground(input_path, output_path):
     # Removes the background, then adds a black canvas
     input_image = Image.open(input_path)
     output_image = remove(input_image)
