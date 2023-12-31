@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from keras.models import load_model
 
-def predict_result( output_path, model_path):
+def predictResult( output_path, model_path):
     # Load the trained model, resize and normalize the image, then predict it using the preloaded model
     model = load_model(model_path)
 
