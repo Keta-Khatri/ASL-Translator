@@ -40,7 +40,7 @@ def captureHandImage():
     all_letters_label = tk.Label(root, text="Predicted Letters: ", font=("Helvetica", 16))
     all_letters_label.grid(row=1, column=0, sticky="nw")
 
-    def destroy_root():
+    def destroyRoot():
         root.destroy()
 
     # Capture frame-by-frame, convert the BGR image to RGBB, create a copy of the frame without landmarks from mediapipe hands and display
@@ -108,7 +108,7 @@ def captureHandImage():
         elif key == ord('q'):
             print("Predicted Letters:", ''.join(map(str, predicted_letters))) 
             updateLabels(predicted_letter_label, all_letters_label, "")
-            root.after(30000, destroy_root)
+            root.after(30000, destroyRoot)
             break
 
         root.update_idletasks()
