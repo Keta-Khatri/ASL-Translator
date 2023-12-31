@@ -13,7 +13,7 @@ from translateResult import translate_result
 
 
 
-def update_labels(letter_label, all_letters_label, letter, predicted_letters):
+def updateLabels(letter_label, all_letters_label, letter, predicted_letters):
     letter_label.config(text=f"Current Letter: {letter}")
 
     all_letters_label.config(
@@ -21,7 +21,7 @@ def update_labels(letter_label, all_letters_label, letter, predicted_letters):
 
 
 # Open the camera and initialize mediapipe hands, and store history of the hands for processing
-def capture_hand_image():
+def captureHandImage():
 
     cap = cv2.VideoCapture(0)
 
@@ -101,13 +101,13 @@ def capture_hand_image():
                 if predicted_class is not None:
                     letter = translate_result(predicted_class)
                     predicted_letters.append(letter) 
-                    update_labels(predicted_letter_label,
+                    updateLabels(predicted_letter_label,
                                   all_letters_label, letter, predicted_letters)
 
         # Break the loop when 'q' is pressed
         elif key == ord('q'):
             print("Predicted Letters:", ''.join(map(str, predicted_letters))) 
-            update_labels(predicted_letter_label, all_letters_label, "")
+            updateLabels(predicted_letter_label, all_letters_label, "")
             root.after(30000, destroy_root)
             break
 
