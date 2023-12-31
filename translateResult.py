@@ -1,4 +1,4 @@
-def translate_result(predicted_class):
+def translateResult(predicted_class):
     # Uses the dictionary to translate the predicted results
     translate = {
         '0': 0,
