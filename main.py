@@ -1,5 +1,5 @@
-from liveImageCapture import capture_hand_image
+from liveImageCapture import captureHandImage
 
-capture_hand_image()
+captureHandImage()
 
 print("DONE")
